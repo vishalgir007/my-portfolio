@@ -1,4 +1,4 @@
-![Portfolio Screenshot](cp.png)
+![Portfolio Screenshot](imgv.png)
 
 # 🌌 Vishal Goswami Portfolio Website
 
