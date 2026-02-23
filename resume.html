@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vishal Goswami - Resume</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f5f5f5;
+            padding: 20px;
+        }
+
+        .resume-container {
+            max-width: 850px;
+            margin: 0 auto;
+            background: white;
+            padding: 50px 60px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+
+        /* Header Section */
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 3px solid #2563eb;
+        }
+
+        .header h1 {
+            font-size: 36px;
+            color: #1e293b;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .header .title {
+            font-size: 18px;
+            color: #2563eb;
+            margin-bottom: 15px;
+            font-weight: 500;
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            font-size: 14px;
+            color: #64748b;
+        }
+
+        .contact-info a {
+            color: #2563eb;
+            text-decoration: none;
+        }
+
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+
+        /* Section Styling */
+        .section {
+            margin-bottom: 30px;
+        }
+
+        .section-title {
+            font-size: 20px;
+            color: #1e293b;
+            font-weight: 700;
+            margin-bottom: 15px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #e2e8f0;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Education & Experience */
+        .entry {
+            margin-bottom: 20px;
+        }
+
+        .entry-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 5px;
+        }
+
+        .entry-title {
+            font-size: 16px;
+            font-weight: 600;
+            color: #1e293b;
+        }
+
+        .entry-date {
+            font-size: 14px;
+            color: #64748b;
+            font-style: italic;
+        }
+
+        .entry-subtitle {
+            font-size: 15px;
+            color: #2563eb;
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+
+        .entry-description {
+            font-size: 14px;
+            color: #475569;
+            line-height: 1.7;
+        }
+
+        .entry-description ul {
+            margin-left: 20px;
+            margin-top: 8px;
+        }
+
+        .entry-description li {
+            margin-bottom: 6px;
+        }
+
+        /* Skills Section */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: max-content 1fr;
+            gap: 12px 20px;
+            font-size: 14px;
+        }
+
+        .skill-category {
+            font-weight: 600;
+            color: #1e293b;
+        }
+
+        .skill-list {
+            color: #475569;
+        }
+
+        /* Projects Section */
+        .project {
+            margin-bottom: 20px;
+        }
+
+        .project-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 5px;
+        }
+
+        .project-name {
+            font-size: 16px;
+            font-weight: 600;
+            color: #1e293b;
+        }
+
+        .project-links {
+            font-size: 13px;
+        }
+
+        .project-links a {
+            color: #2563eb;
+            text-decoration: none;
+            margin-left: 10px;
+        }
+
+        .project-links a:hover {
+            text-decoration: underline;
+        }
+
+        .project-tech {
+            font-size: 13px;
+            color: #64748b;
+            font-style: italic;
+            margin-bottom: 6px;
+        }
+
+        .project-description {
+            font-size: 14px;
+            color: #475569;
+            line-height: 1.7;
+        }
+
+        /* Print Styles */
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+            
+            .resume-container {
+                box-shadow: none;
+                padding: 20px;
+            }
+            
+            .section {
+                page-break-inside: avoid;
+            }
+        }
+
+        /* Download Button */
+        .download-btn {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: #2563eb;
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 600;
+            box-shadow: 0 4px 6px rgba(37, 99, 235, 0.3);
+            transition: all 0.3s;
+        }
+
+        .download-btn:hover {
+            background: #1d4ed8;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 8px rgba(37, 99, 235, 0.4);
+        }
+
+        @media print {
+            .download-btn {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <button class="download-btn" onclick="window.print()">Download as PDF</button>
+    
+    <div class="resume-container">
+        <!-- Header -->
+        <div class="header">
+            <h1>VISHAL GOSWAMI</h1>
+            <div class="title">Software Engineer | Full-Stack Developer | AI/ML Enthusiast</div>
+            <div class="contact-info">
+                <span>📧 <a href="mailto:vishalgir52@gmail.com">vishalgir52@gmail.com</a></span>
+                <span>📱 +91-8839002685</span>
+                <span>📍 Indore, India</span>
+                <span>🔗 <a href="https://github.com/vishalgir007" target="_blank">GitHub</a></span>
+                <span>🔗 <a href="https://www.linkedin.com/in/vishal-goswami-07550734a/" target="_blank">LinkedIn</a></span>
+            </div>
+        </div>
+
+        <!-- Summary -->
+        <div class="section">
+            <div class="section-title">Professional Summary</div>
+            <div class="entry-description">
+                Computer Science and Design undergraduate with hands-on experience in full-stack development and AI/ML. 
+                Proficient in Python, React, TensorFlow, and core computer science fundamentals. Seeking opportunities 
+                to build scalable, high-impact software solutions.
+            </div>
+        </div>
+
+        <!-- Education -->
+        <div class="section">
+            <div class="section-title">Education</div>
+            <div class="entry">
+                <div class="entry-header">
+                    <div>
+                        <div class="entry-title">Madhav Institute of Technology & Science, Gwalior</div>
+                        <div class="entry-subtitle">B.Tech in Computer Science and Design</div>
+                    </div>
+                    <div class="entry-date">Expected 2026</div>
+                </div>
+                <div class="entry-description">
+                    <strong>SGPA:</strong> 8.44<br>
+                    <strong>Relevant Coursework:</strong> Data Structures & Algorithms, Database Management Systems, 
+                    Operating Systems, Computer Organization & Architecture, Object-Oriented Programming, Computer Networks, 
+                    Artificial Intelligence & Machine Learning
+                </div>
+            </div>
+        </div>
+
+        <!-- Experience -->
+        <div class="section">
+            <div class="section-title">Professional Experience</div>
+            <div class="entry">
+                <div class="entry-header">
+                    <div>
+                        <div class="entry-title">AI Intern (Remote)</div>
+                        <div class="entry-subtitle">Infosys Springboard</div>
+                    </div>
+                    <div class="entry-date">Aug 2025 – Oct 2025</div>
+                </div>
+                <div class="entry-description">
+                    <ul>
+                        <li>Developing <strong>AgroBot</strong>, a universal AI model for smart agricultural automation under Infosys Springboard Virtual Internship (AIML)</li>
+                        <li>Applied Python, TensorFlow, and Deep Learning for crop monitoring, yield prediction, and plant disease detection</li>
+                        <li>Gained practical experience in ML workflows, computer vision, and model optimization for real-world applications</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Projects -->
+        <div class="section">
+            <div class="section-title">Featured Projects</div>
+            
+            <div class="project">
+                <div class="project-header">
+                    <div class="project-name">LeetNotes - AI-Driven Coding Assistant</div>
+                    <div class="project-links">
+                        <a href="https://github.com/vishalgir007/LeetNotes-AI" target="_blank">GitHub</a>
+                        <a href="https://leetnotes.netlify.app/" target="_blank">Live Demo</a>
+                    </div>
+                </div>
+                <div class="project-tech">React • TypeScript • Node.js • Supabase • Google Gemini API</div>
+                <div class="project-description">
+                    Developed a full-stack AI coding assistant integrating Gemini API to automate structured problem notes, 
+                    delivering a scalable and user-friendly solution.
+                </div>
+            </div>
+
+            <div class="project">
+                <div class="project-header">
+                    <div class="project-name">Crypto Horizon Dashboard</div>
+                    <div class="project-links">
+                        <a href="https://github.com/vishalgir007/cryprocurrency-trading" target="_blank">GitHub</a>
+                        <a href="https://cryptocurrency-trading.vercel.app/login" target="_blank">Live Demo</a>
+                    </div>
+                </div>
+                <div class="project-tech">React • TypeScript • Vite • Tailwind CSS • shadcn/ui • Vercel</div>
+                <div class="project-description">
+                    Developed a production-ready crypto trading platform with interactive charts, wallet management, 
+                    and customizable price alerts, deployed on Vercel for scalable performance.
+                </div>
+            </div>
+
+            <div class="project">
+                <div class="project-header">
+                    <div class="project-name">LinkSaver - AI-Powered Bookmark Manager</div>
+                    <div class="project-links">
+                        <a href="https://github.com/vishalgir007/linksaver-app" target="_blank">GitHub</a>
+                        <a href="https://nuralink-savercom.vercel.app/" target="_blank">Live Demo</a>
+                    </div>
+                </div>
+                <div class="project-tech">Next.js • TypeScript • Supabase • Tailwind CSS • Framer Motion • Jina AI API • Vercel</div>
+                <div class="project-description">
+                    Built an AI-powered bookmark management platform integrating Jina AI for intelligent content extraction, 
+                    secure authentication, and encrypted cloud storage.
+                </div>
+            </div>
+
+            <div class="project">
+                <div class="project-header">
+                    <div class="project-name">AgroBot - The universal AI</div>
+                    <div class="project-links">
+                        <a href="https://github.com/vishalgir007/AgroBot-AI" target="_blank">GitHub</a>
+                    </div>
+                </div>
+                <div class="project-tech">Python • TensorFlow • Deep Learning • Computer Vision</div>
+                <div class="project-description">
+                    Engineered an AI-powered farming assistant applying deep learning for real-time crop health and yield prediction.
+                </div>
+            </div>
+
+            <div class="project">
+                <div class="project-header">
+                    <div class="project-name">Email AI Company Tool</div>
+                    <div class="project-links">
+                        <a href="https://github.com/vishalgir007/email-ai-company-tool" target="_blank">GitHub</a>
+                    </div>
+                </div>
+                <div class="project-tech">Python • Flask • Streamlit • Web Scraping • SQLite • Streamlit UI</div>
+                <div class="project-description">
+                    Built an AI-powered email intelligence tool that enriches company data and sector insights from raw email addresses 
+                    with automated classification.
+                </div>
+            </div>
+        </div>
+
+        <!-- Technical Skills -->
+        <div class="section">
+            <div class="section-title">Technical Skills</div>
+            <div class="skills-grid">
+                <div class="skill-category">Languages:</div>
+                <div class="skill-list">C, C++, Python, JavaScript, HTML, CSS</div>
+                
+                <div class="skill-category">Web Development:</div>
+                <div class="skill-list">ReactJS, Next.js, Node.js, TypeScript, Bootstrap, Tailwind CSS</div>
+                
+                <div class="skill-category">AI/ML Libraries:</div>
+                <div class="skill-list">TensorFlow, Pandas, NumPy, Matplotlib, OpenCV</div>
+                
+                <div class="skill-category">Databases:</div>
+                <div class="skill-list">MySQL, MongoDB, Supabase</div>
+                
+                <div class="skill-category">Tools & Platforms:</div>
+                <div class="skill-list">Git, GitHub, VS Code, Google Colab, Vercel, Netlify</div>
+                
+                <div class="skill-category">Core Concepts:</div>
+                <div class="skill-list">Data Structures & Algorithms, Design & Analysis of Algorithms, Operating Systems, 
+                    Computer Organization & Architecture, Database Management Systems, Object-Oriented Programming, 
+                    Computer Networks, Artificial Intelligence & Machine Learning</div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Optional: Auto-print functionality
+        // window.onload = function() { window.print(); }
+    </script>
+</body>
+</html>
